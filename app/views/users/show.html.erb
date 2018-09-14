@@ -1,0 +1,10 @@
+<%= @user.username %>
+<%= button_to("Edit User", { :action => "edit" }, :method => :get) %>
+<%= button_to("Delete User", @user, method: 'delete') %>
+
+<p>
+    <%= button_to("Create Post",{:controller => 'posts', :action => 'new'}, :method => :get) %>
+</p>
+
+<%= button_to("View All Posts",{:controller => 'posts', :action => 'index'}, :method => :get) %>
+

@@ -1,0 +1,13 @@
+<div id = "index-page">
+    
+    <h1>MyBlogging</h1><br/><br/> 
+    <%= button_to "Get Started", { :action => "new" }, :method => :get %>
+    <p>Already have an Account?</p>
+    <%= button_to "Sign In", new_session_path, :method => :get %>
+
+<p>
+    <% @users.each do |user| %>
+    <%= user.username %>
+  <% end %>
+</p>
+</div>

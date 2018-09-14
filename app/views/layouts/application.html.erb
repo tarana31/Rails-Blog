@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsBlog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id = "topnav">
+      <a href="/"> Home </a>
+      <a href="/signin"> Sign In </a>
+      <a href="users/new"> Sign Up </a>
+      <a href="/signout"> Sign Out </a>
+    </div>
+    
+    <%= flash[:notice] if flash[:notice] %> 
+    <%= yield %>
+  </body>
+</html>
