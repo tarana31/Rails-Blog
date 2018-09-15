@@ -18,3 +18,15 @@ body {
     font-size: 20px;
     text-align: center;
 }
+
+#post-indexcontainer {
+    display: inline-flex;
+    color: chartreuse;
+    width: 1200px;
+    height: 200px;
+}
+#postbox {
+    margin: 35px;
+    // background-color: rgb(47, 65, 47);
+    border: 1px solid white;
+}
