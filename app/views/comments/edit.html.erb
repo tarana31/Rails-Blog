@@ -1,10 +1,10 @@
 
 <div id="comment-form">
-<h4>New Comment</h4>
+<h4>Edit your Comment</h4>
 <%= form_for @comment do |f| %>
     Comment:<%= f.text_area :content , required:"required" %><br>
             <%= f.hidden_field :post_id, value: params[:post_id] %>
             <%= f.hidden_field :user_id, value: session[:user_id]%>
-            <div id="action"><%= f.submit %></div>
+            <div id="acttion"><%= f.submit %></div>
 <% end %>
 </div>

@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
     
         if user.present? && user.password == params[:password]
           session[:user_id] = user.id
-          flash[:notice] = "Logged in!"
         #   redirect_to user_path(user)
         redirect_to user
         else

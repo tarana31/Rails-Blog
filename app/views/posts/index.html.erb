@@ -1,17 +1,14 @@
-<h2>Posts </h2>
-<div id = "post-indexcontainer">
 
-<% @posts.reverse.each do |post| %>
- <a href="/posts/<%= post.id %>" id ="postbox">
-    <div class="post-title">
-        <h3><%= post.title %></h3>
-    </div>
-    <div class="post-body">
-        <h3><%= post.body %></h3>
-    </div>
-    <span>
-        Posted by: <%= post.user_id %>
-    </span>
-<% end %>
-</a>
+<h1> Choose a Post to view and comment</h1>
+
+<div id = "post-indexcontainer">
+    <% @posts.reverse.each do |post| %>
+        <a href="/posts/<%= post.id %>" id ="postbox">
+        <div class="post-details">
+            <h3>Title:<%= post.title %></h3>
+            <h3>Post:<%= post.body %></h3>
+            Posted by: <%= post.user_id %>
+        </div>
+        </a>
+    <% end %>
 </div>

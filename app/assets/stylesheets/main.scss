@@ -1,32 +1,95 @@
 body {
-    // background-image: url("4.jpg");
+    background-image: url("steps.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: darkblue;
-    color:white;
-    a {
-        color: white;
-    }
+}
+    
+a {
+    text-decoration: none;
+    font-weight: bold;
 }
 
-#topnav {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; 
+}
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
     text-align: center;
-    margin-top: 20px;
-    font-size: 20px;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
 }
 #index-page {
     font-size: 20px;
     text-align: center;
 }
 
-#post-indexcontainer {
-    display: inline-flex;
-    color: chartreuse;
-    width: 1200px;
-    height: 200px;
+// session/new
+
+#session-new {
+    margin: 0px 100px 0px 100px;
 }
-#postbox {
-    margin: 35px;
-    // background-color: rgb(47, 65, 47);
-    border: 1px solid white;
+
+#session-new #text{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#session-new #login {
+    font-size: 40px;
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#user-showpage {
+    h2 {
+        margin-left: 600px;
+    }
+}
+
+#side-container {
+    width: 50px;
+    height: 400px;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #333; 
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    
+    li a:hover {
+        background-color: #111;
+        color: white;
+    }
 }

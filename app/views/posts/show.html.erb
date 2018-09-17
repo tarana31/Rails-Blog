@@ -1,8 +1,8 @@
+<div id="post-show">
 <h1>Post</h1>
 
-<h3><%= @post.title %></h3>
-<p><%= @post.body %></p>
-
+<h3>Title: <%= @post.title %></h3>
+<p>Comment: <%= @post.body %></p>
 <span>
     Posted by: <%= @post.user_id %>
 </span>
@@ -12,8 +12,21 @@
             <%= link_to 'Delete', @post, method: :delete%>
         <% end %>       
 </span>
-
 <div class="comment-index">
-    <a href="/posts/<%=@post.id%>/comments/new">Comment</a>
-   
+    <%= link_to("Add Comment", new_comment_path(post_id: @post.id)) %>
 </div>
+</div>
+
+<h3><% @post.comments.reverse.each do |c| %> </h3> 
+            <div id="comment-one">
+                <h4>Comment</h4>
+                <h2>Content:<%= c.content %> </h2>
+                <h5>From - <%= c.user_id %></h5>
+
+                
+                    <%= link_to("Edit", edit_comment_path(c.id)) %>
+                    <%= link_to("Delete", comment_path(c.id), method: :delete) %>
+                
+            </div>
+        <% end %>
+    </div>

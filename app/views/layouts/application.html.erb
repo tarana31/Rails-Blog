@@ -5,17 +5,28 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div id = "topnav">
-      <a href="/"> Home </a>
-      <a href="/signin"> Sign In </a>
-      <a href="users/new"> Sign Up </a>
-      <a href="/signout"> Sign Out </a>
-    </div>
+    <nav id = "topnav">
+    <ul>
+      <% if !session[:user_id] %>
+        <li><a href="/">Home</a></li> 
+        <li><a href="/users/new">Join Us</a></li>
+        <li><a href="/signin">Sign In</a></li>
+      <% else %>
+        <li><a href="/signout">Log Out</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><%= link_to("Edit User", @user, method: 'edit' ) %></li>
+        <li><%= link_to("Delete User", @user, method: 'delete') %></li>
+        
+        
+      <% end %>
+    </ul>
+    </nav>
     
     <%= flash[:notice] if flash[:notice] %> 
     <%= yield %>
